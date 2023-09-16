@@ -6,8 +6,9 @@ alias hidden="dir -d .*"                                                      # 
 alias config="code ~/.bashrc"                                                 # Edit .bashrc with VScode
 alias new="atom ."                                                            # Create a blank file in atom editor
 alias note="notepad++ ~/Documents/Important\ Documents/My\ Books/newfile.txt" # Create a new note
-alias win="explorer ."                                                        # Open a new window from current dir
-alias e="exit"                                                                # Close the terminal
+alias e="explorer ."                                                          # Open a new window from current dir
+alias q="exit"                                                                # Close the terminal
+alias gituser="cd /c/Program\ Files/Git/etc/profile.d"
 
 # ---- Other Useful Commands ---- #
 alias ..='cd ..'
@@ -29,10 +30,13 @@ alias cdjdown="cd C:/Users/jpdes/Downloads" # Go to dl folder
 alias cdcode="cd C:/Users/jpdes/Documents/My\ Websites"
 alias cdimportant="cd C:/Users/jpdes/Documents/Important\ Documents" # My important stuff
 alias cdapp="cd c/Users/jpdes/AppData"                               # Appdata
+alias cmd="cdcode && cd Powershell\ Commands/git-bash && explorer ." # Go toommands folder
 
+# ---- Copy Commands and .bashrc ---- #
 hist() (
-    cdj &&
-        history >>historyCommands.txt
+    cdcode && cd Powershell\ Commands &&
+        history >>historyCommands.txt &&
+        cp ~/.bashrc ./
 )
 
 # Open coding projects folder in explorer (Shell Function)
